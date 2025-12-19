@@ -27,7 +27,18 @@ const itemVariants = {
 export default function Hero() {
     return (
         <section className="pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden relative">
-            <div className="container mx-auto px-4 md:px-6">
+            {/* Background Image */}
+            <div className="absolute inset-0 z-0 opacity-40">
+                <Image
+                    src="/hero-bg.png"
+                    alt="Background"
+                    fill
+                    className="object-cover"
+                    priority
+                />
+            </div>
+
+            <div className="container mx-auto px-4 md:px-6 relative z-10">
                 <div className="flex flex-col md:flex-row items-center gap-12">
 
                     {/* Text Content */}

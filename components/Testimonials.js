@@ -8,31 +8,31 @@ const testimonials = [
         name: "Sarah Jenkins",
         role: "Fitness Enthusiast",
         content: "Health Fusion 360 completely transformed my daily routine. The AI insights are spot on!",
-        avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Sarah",
+        avatar: "/avatars/sarah.png",
     },
     {
         name: "Michael Chen",
         role: "Software Engineer",
         content: "I love the clean data visualization. It's so easy to track my progress over time.",
-        avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Michael",
+        avatar: "/avatars/michael.png",
     },
     {
         name: "Emma Wilson",
         role: "Yoga Instructor",
         content: "The best health app I've used. It balances activity tracking with holistic wellness perfectly.",
-        avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Emma",
+        avatar: "/avatars/emma.png",
     },
     {
         name: "David Miller",
         role: "Marathon Runner",
         content: "Keeps me accountable and motivated. The community features are a great bonus.",
-        avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=David",
+        avatar: "/avatars/david.png",
     },
     {
         name: "Olivia Davis",
         role: "Nutritionist",
         content: "I recommend this to all my clients. The integration with other devices is seamless.",
-        avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Olivia",
+        avatar: "/avatars/olivia.png",
     },
 ];
 
