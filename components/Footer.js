@@ -28,7 +28,7 @@ export default function Footer() {
                             <li><Link href="#" className="hover:text-primary transition-colors">About Us</Link></li>
                             <li><Link href="#" className="hover:text-primary transition-colors">Careers</Link></li>
                             <li><Link href="#" className="hover:text-primary transition-colors">Blog</Link></li>
-                            <li><a href="mailto:support@healthfusion360.com" className="hover:text-primary transition-colors">Contact Support</a></li>
+                            <li><a href="mailto:support@healthfusion360.ai" className="hover:text-primary transition-colors">Contact Support</a></li>
                         </ul>
                     </div>
 

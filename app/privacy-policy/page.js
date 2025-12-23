@@ -100,7 +100,7 @@ export default function PrivacyPolicy() {
                                         <p className="text-gray-700 mb-2 text-sm">We provide a simple way to permanently delete your data:</p>
                                         <ul className="list-disc pl-6 space-y-1 text-gray-700 text-sm">
                                             <li><strong>In-App:</strong> Go to <code>Settings &gt; Account &gt; Delete Account</code> to initiate the process immediately.</li>
-                                            <li><strong>Email:</strong> Send a request to <a href="mailto:support@healthfusion360.com" className="text-primary hover:underline">support@healthfusion360.com</a> with subject "Account Deletion Request".</li>
+                                            <li><strong>Email:</strong> Send a request to <a href="mailto:support@healthfusion360.ai" className="text-primary hover:underline">support@healthfusion360.ai</a> with subject "Account Deletion Request".</li>
                                         </ul>
                                     </div>
                                 </section>
@@ -123,7 +123,7 @@ export default function PrivacyPolicy() {
                                 <section id="contact" className="scroll-mt-32">
                                     <h3 className="text-2xl font-bold text-gray-900 mb-4">8. Contact Us</h3>
                                     <p>
-                                        If you have questions or comments about this policy, you may email us at <a href="mailto:support@healthfusion360.com" className="text-primary font-bold hover:underline">support@healthfusion360.com</a>.
+                                        If you have questions or comments about this policy, you may email us at <a href="mailto:support@healthfusion360.ai" className="text-primary font-bold hover:underline">support@healthfusion360.ai</a>.
                                     </p>
                                 </section>
                             </div>
