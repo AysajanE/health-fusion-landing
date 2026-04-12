@@ -16,7 +16,7 @@ export default function PrivacyPolicy() {
                             <h3 className="font-bold text-gray-900 mb-4 uppercase text-sm tracking-wider">Contents</h3>
                             <ul className="space-y-3 text-sm text-gray-600">
                                 <li><a href="#collection" className="hover:text-primary transition-colors">1. Information Collection</a></li>
-                                <li><a href="#healthkit" className="hover:text-primary transition-colors">2. HealthKit & Google Fit</a></li>
+                                <li><a href="#healthkit" className="hover:text-primary transition-colors">2. Apple HealthKit Data</a></li>
                                 <li><a href="#usage" className="hover:text-primary transition-colors">3. Data Usage</a></li>
                                 <li><a href="#retention" className="hover:text-primary transition-colors">4. Data Retention</a></li>
                                 <li><a href="#deletion" className="hover:text-primary transition-colors">5. Your Rights & Deletion</a></li>
@@ -54,15 +54,15 @@ export default function PrivacyPolicy() {
                                 </section>
 
                                 <section id="healthkit" className="scroll-mt-32">
-                                    <h3 className="text-2xl font-bold text-gray-900 mb-4">2. HealthKit and Google Fit Data</h3>
+                                    <h3 className="text-2xl font-bold text-gray-900 mb-4">2. Apple HealthKit Data</h3>
                                     <p className="mb-4">
-                                        To provide our core tracking features, Health Fusion 360 integrates with Apple's HealthKit and Google Fit.
-                                        We read data such as step count, calories burned, heart rate, and sleep analysis from these services.
+                                        To provide our core tracking features on iOS, Health Fusion 360 integrates with Apple's HealthKit.
+                                        With your explicit permission, we read data such as step count, calories burned, heart rate, and sleep analysis directly from HealthKit.
                                     </p>
                                     <div className="bg-blue-50 border-l-4 border-blue-500 p-6 rounded-r-xl">
                                         <p className="font-semibold text-blue-900 mb-2">Important Transparency Note:</p>
                                         <p className="text-blue-800 text-sm leading-relaxed">
-                                            We Explicitly confirm that we do not use, sell, rent, or share HealthKit or Google Fit data for marketing, advertising, or use-based data mining purposes.
+                                            We explicitly confirm that we do not use, sell, rent, or share HealthKit data for marketing, advertising, or use-based data mining purposes.
                                             This data is used solely to provide personal health insights, visualize your progress, and power our AI prediction engine.
                                             Your health data stays private and secure.
                                         </p>

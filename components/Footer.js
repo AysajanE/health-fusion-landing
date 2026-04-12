@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
+import Image from 'next/image';
 
 export default function Footer() {
     return (
@@ -8,27 +8,27 @@ export default function Footer() {
                 <div className="grid md:grid-cols-4 gap-12 mb-16">
                     <div className="col-span-1 md:col-span-2">
                         <h3 className="text-2xl font-bold mb-4 flex items-center gap-2">
-                            <img src="/logo.png" className="w-8 h-8" />
+                            <Image src="/logo.png" alt="Health Fusion 360" width={32} height={32} className="w-8 h-8" />
                             Health Fusion 360
                         </h3>
                         <p className="text-gray-500 mb-6 max-w-sm">
-                            Empowering your health journey with AI-driven insights and smart tracking. Join thousands of users achieving their goals today.
+                            Empowering your health journey with AI-driven insights and smart tracking. Designed to help you build lifelong healthy habits.
                         </p>
-                        <div className="flex gap-4">
-                            <div className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-primary hover:text-white transition-colors cursor-pointer"><Facebook size={20} /></div>
-                            <div className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-primary hover:text-white transition-colors cursor-pointer"><Twitter size={20} /></div>
-                            <div className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-primary hover:text-white transition-colors cursor-pointer"><Instagram size={20} /></div>
-                            <div className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-primary hover:text-white transition-colors cursor-pointer"><Linkedin size={20} /></div>
-                        </div>
+                        <a
+                            href="mailto:support@healthfusion360.ai"
+                            className="inline-flex items-center gap-2 text-primary font-semibold hover:underline"
+                        >
+                            support@healthfusion360.ai
+                        </a>
                     </div>
 
                     <div>
-                        <h4 className="font-bold text-gray-900 mb-6">Company</h4>
+                        <h4 className="font-bold text-gray-900 mb-6">Explore</h4>
                         <ul className="space-y-4 text-gray-500 font-medium">
-                            <li><Link href="#" className="hover:text-primary transition-colors">About Us</Link></li>
-                            <li><Link href="#" className="hover:text-primary transition-colors">Careers</Link></li>
-                            <li><Link href="#" className="hover:text-primary transition-colors">Blog</Link></li>
-                            <li><a href="mailto:support@healthfusion360.ai" className="hover:text-primary transition-colors">Contact Support</a></li>
+                            <li><Link href="#features" className="hover:text-primary transition-colors">Features</Link></li>
+                            <li><Link href="#how-it-works" className="hover:text-primary transition-colors">How It Works</Link></li>
+                            <li><Link href="#testimonials" className="hover:text-primary transition-colors">Built For You</Link></li>
+                            <li><Link href="#faq" className="hover:text-primary transition-colors">FAQ</Link></li>
                         </ul>
                     </div>
 
@@ -37,7 +37,7 @@ export default function Footer() {
                         <ul className="space-y-4 text-gray-500">
                             <li><Link href="/privacy-policy" className="hover:text-primary transition-colors">Privacy Policy</Link></li>
                             <li><Link href="/terms-conditions" className="hover:text-primary transition-colors">Terms & Conditions</Link></li>
-                            <li><Link href="#" className="hover:text-primary transition-colors">Cookie Policy</Link></li>
+                            <li><a href="mailto:support@healthfusion360.ai" className="hover:text-primary transition-colors">Contact Support</a></li>
                         </ul>
                     </div>
                 </div>

@@ -4,6 +4,7 @@ import Stats from '@/components/Stats';
 import Features from '@/components/Features';
 import HowItWorks from '@/components/HowItWorks';
 import Testimonials from '@/components/Testimonials';
+import Waitlist from '@/components/Waitlist';
 import FAQ from '@/components/FAQ';
 import Footer from '@/components/Footer';
 
@@ -16,6 +17,7 @@ export default function Home() {
       <Features />
       <HowItWorks />
       <Testimonials />
+      <Waitlist />
       <FAQ />
       <Footer />
     </main>
