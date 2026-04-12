@@ -60,8 +60,8 @@ export default function Header() {
                             {link.name}
                         </Link>
                     ))}
-                    <Link href="#" className="bg-primary text-white px-5 py-2.5 rounded-full font-semibold hover:bg-blue-700 transition-all shadow-lg shadow-blue-500/20 hover:shadow-blue-500/40 transform hover:-translate-y-0.5">
-                        Get App
+                    <Link href="#waitlist" className="bg-primary text-white px-5 py-2.5 rounded-full font-semibold hover:bg-blue-700 transition-all shadow-lg shadow-blue-500/20 hover:shadow-blue-500/40 transform hover:-translate-y-0.5">
+                        Join Waitlist
                     </Link>
                 </nav>
 
@@ -93,8 +93,12 @@ export default function Header() {
                                 {link.name}
                             </Link>
                         ))}
-                        <Link href="#" className="bg-primary text-white text-center py-3 rounded-xl font-bold">
-                            Get App
+                        <Link
+                            href="#waitlist"
+                            className="bg-primary text-white text-center py-3 rounded-2xl font-bold"
+                            onClick={() => setIsMenuOpen(false)}
+                        >
+                            Join Waitlist
                         </Link>
                     </motion.div>
                 )}

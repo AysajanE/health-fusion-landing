@@ -34,11 +34,35 @@ export default function FAQ() {
     };
 
     return (
-        <section id="faq" className="py-24 bg-white">
+        <section id="faq" className="py-28 scroll-mt-24 bg-white">
             <div className="container mx-auto px-4 md:px-6 max-w-3xl">
-                <div className="text-center mb-16">
-                    <h2 className="text-4xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
-                    <p className="text-gray-600">Got questions? We've got answers.</p>
+                <div className="text-center mb-20">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        className="inline-block bg-white border border-gray-200 text-gray-600 px-4 py-2 rounded-full font-semibold text-sm mb-5 shadow-sm"
+                    >
+                        Questions
+                    </motion.div>
+                    <motion.h2
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.1 }}
+                        className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-5 tracking-tight"
+                    >
+                        Frequently Asked <span className="text-gradient">Questions</span>
+                    </motion.h2>
+                    <motion.p
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.2 }}
+                        className="text-gray-600 text-lg"
+                    >
+                        Got questions? We've got answers.
+                    </motion.p>
                 </div>
 
                 <div className="space-y-4">

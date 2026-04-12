@@ -25,7 +25,7 @@ export default function TermsConditions() {
 
                     {/* Main Content */}
                     <div className="w-full md:w-3/4">
-                        <div className="bg-white p-8 md:p-12 rounded-3xl shadow-sm border border-gray-100">
+                        <div className="bg-white p-8 md:p-12 rounded-2xl shadow-sm border border-gray-100">
                             <h1 className="text-4xl font-bold mb-2 text-gray-900">Terms and Conditions</h1>
                             <p className="text-gray-500 mb-8">Last Updated: {new Date().toLocaleDateString()}</p>
 

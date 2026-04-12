@@ -38,26 +38,22 @@ export default function Waitlist() {
     };
 
     return (
-        <section id="waitlist" className="py-24">
+        <section id="waitlist" className="py-28 scroll-mt-24">
             <div className="container mx-auto px-4 md:px-6 max-w-4xl">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
-                    className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-primary via-secondary to-accent p-1 shadow-2xl shadow-blue-500/20"
+                    className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-primary via-secondary to-accent p-[1px] shadow-2xl shadow-blue-500/10"
                 >
-                    <div className="relative bg-white/95 backdrop-blur-xl rounded-[22px] px-8 py-12 md:px-16 md:py-16">
-                        {/* Decorative blobs */}
-                        <div className="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl -z-10" />
-                        <div className="absolute bottom-0 left-0 w-64 h-64 bg-accent/10 rounded-full blur-3xl -z-10" />
-
-                        <div className="text-center mb-8">
-                            <div className="inline-flex items-center gap-2 bg-blue-50 text-primary px-4 py-2 rounded-full font-bold text-sm mb-5 border border-blue-100">
+                    <div className="relative bg-white rounded-2xl px-8 py-14 md:px-16 md:py-20">
+                        <div className="text-center mb-10">
+                            <div className="inline-flex items-center gap-2 bg-blue-50 text-primary px-4 py-2 rounded-full font-semibold text-sm mb-5 border border-blue-100">
                                 <Mail size={16} />
                                 Early Access
                             </div>
-                            <h2 className="text-3xl md:text-5xl font-extrabold text-gray-900 mb-4 tracking-tight">
+                            <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-5 tracking-tight">
                                 Be First in Line for <br />
                                 <span className="text-gradient">Health Fusion 360</span>
                             </h2>

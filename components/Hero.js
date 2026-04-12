@@ -1,7 +1,6 @@
 "use client";
-import Image from 'next/image';
 import Link from 'next/link';
-import { Apple, Play, Menu } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const containerVariants = {
@@ -26,18 +25,7 @@ const itemVariants = {
 
 export default function Hero() {
     return (
-        <section className="pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden relative">
-            {/* Background Image */}
-            <div className="absolute inset-0 z-0 opacity-40">
-                <Image
-                    src="/hero-bg.png"
-                    alt="Background"
-                    fill
-                    className="object-cover"
-                    priority
-                />
-            </div>
-
+        <section className="pt-32 pb-20 md:pt-44 md:pb-32 overflow-hidden relative">
             <div className="container mx-auto px-4 md:px-6 relative z-10">
                 <div className="flex flex-col md:flex-row items-center gap-12">
 
@@ -50,9 +38,10 @@ export default function Hero() {
                     >
                         <motion.div
                             variants={itemVariants}
-                            className="inline-block bg-blue-50/50 backdrop-blur-sm text-primary px-4 py-2 rounded-full font-bold text-sm mb-6 border border-blue-100 shadow-sm"
+                            className="inline-flex items-center gap-2 bg-white/60 backdrop-blur-sm text-primary px-4 py-2 rounded-full font-semibold text-sm mb-6 border border-blue-100 shadow-sm"
                         >
-                            ✨ Introducing 360 AI Prediction
+                            <span className="inline-block w-2 h-2 rounded-full bg-primary animate-pulse" />
+                            Introducing 360 AI Prediction
                         </motion.div>
 
                         <motion.h1
@@ -69,118 +58,106 @@ export default function Hero() {
                             Go beyond simple tracking. Use our <strong>360 AI</strong> engine to receive accurate health predictions and daily personalized tips.
                         </motion.p>
 
-                        <motion.div variants={itemVariants}>
-                            <div className="mb-4 text-gray-900 font-semibold text-sm uppercase tracking-wider opacity-80">Get the App</div>
-                            <div className="flex gap-4">
-                                <Link href="#" className="group flex items-center gap-3 bg-gray-900 text-white px-6 py-3.5 rounded-2xl hover:bg-gray-800 transition-all hover:scale-105 hover:shadow-xl hover:shadow-primary/20 ring-1 ring-white/10">
-                                    <Play fill="white" size={24} className="group-hover:text-primary transition-colors" />
-                                    <div className="flex flex-col items-start leading-none">
-                                        <span className="text-[10px] uppercase opacity-70 mb-0.5">Get it on</span>
-                                        <span className="text-lg font-bold">Google Play</span>
-                                    </div>
-                                </Link>
-                                <Link href="#" className="group flex items-center gap-3 bg-gray-900 text-white px-6 py-3.5 rounded-2xl hover:bg-gray-800 transition-all hover:scale-105 hover:shadow-xl hover:shadow-primary/20 ring-1 ring-white/10">
-                                    <Apple fill="white" size={24} className="group-hover:text-primary transition-colors" />
-                                    <div className="flex flex-col items-start leading-none">
-                                        <span className="text-[10px] uppercase opacity-70 mb-0.5">Download on the</span>
-                                        <span className="text-lg font-bold">App Store</span>
-                                    </div>
-                                </Link>
-                            </div>
+                        <motion.div variants={itemVariants} className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+                            <Link
+                                href="#waitlist"
+                                className="inline-flex items-center gap-2 bg-primary text-white px-7 py-4 rounded-2xl font-semibold text-base hover:bg-blue-700 transition-all shadow-lg shadow-blue-500/20 hover:shadow-blue-500/40 transform hover:-translate-y-0.5"
+                            >
+                                Join Waitlist
+                                <ArrowRight size={18} />
+                            </Link>
+                            <Link
+                                href="#features"
+                                className="inline-flex items-center gap-2 text-gray-700 px-2 py-4 font-semibold hover:text-primary transition-colors"
+                            >
+                                Learn more
+                            </Link>
                         </motion.div>
                     </motion.div>
 
-                    {/* Image Content (Phone Mockup) */}
+                    {/* Phone Mockup */}
                     <motion.div
-                        className="w-full md:w-1/2 relative perspective-1000"
-                        initial={{ opacity: 0, x: 50, rotateY: 10 }}
-                        animate={{ opacity: 1, x: 0, rotateY: 0 }}
-                        transition={{ type: "spring", duration: 1.5, delay: 0.2 }}
+                        className="w-full md:w-1/2 relative flex justify-center"
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
                     >
-                        <motion.div
-                            animate={{
-                                y: [0, -15, 0],
-                                rotateZ: [0, 1, 0, -1, 0]
-                            }}
-                            transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-                            className="relative w-[320px] h-[650px] mx-auto bg-gray-900 rounded-[3.5rem] border-[8px] border-gray-900 overflow-hidden shadow-2xl glass-dark z-10"
-                        >
-                            {/* Screen Content */}
-                            <div className="w-full h-full bg-white relative overflow-hidden flex flex-col">
-                                <div className="absolute top-0 left-0 w-full h-[50%] bg-gradient-to-br from-blue-600 via-primary to-indigo-600 rounded-b-[3rem] p-6 z-0"></div>
+                        <div className="relative">
+                            {/* Ground shadow */}
+                            <div
+                                aria-hidden="true"
+                                className="absolute -bottom-8 left-1/2 -translate-x-1/2 w-[260px] h-8 bg-black/20 blur-2xl rounded-full"
+                            />
 
-                                <div className="relative z-10 p-6 flex-1 flex flex-col">
-                                    <div className="flex justify-between items-center text-white mb-8 mt-8">
-                                        <div className="bg-white/20 p-2 rounded-xl backdrop-blur-md border border-white/20"><Menu size={20} /></div>
-                                        <div className="w-10 h-10 rounded-full bg-white/20 border-2 border-white/40 backdrop-blur-md"></div>
-                                    </div>
+                            {/* Phone frame */}
+                            <div className="relative w-[300px] h-[610px] bg-gray-900 rounded-[3rem] border-[10px] border-gray-900 overflow-hidden shadow-2xl">
+                                {/* iPhone notch */}
+                                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[110px] h-6 bg-gray-900 rounded-b-2xl z-20" />
 
-                                    <div className="text-white mb-8">
-                                        <motion.h2
-                                            initial={{ opacity: 0, x: -20 }}
-                                            animate={{ opacity: 1, x: 0 }}
-                                            transition={{ delay: 1 }}
-                                            className="text-3xl font-bold tracking-tight"
-                                        >
-                                            Hello, Alex 👋
-                                        </motion.h2>
-                                        <p className="opacity-90 font-medium">Let's check your activity</p>
-                                    </div>
+                                {/* Screen */}
+                                <div className="w-full h-full bg-white relative overflow-hidden flex flex-col">
+                                    {/* Gradient top band */}
+                                    <div className="absolute top-0 left-0 w-full h-[55%] bg-gradient-to-br from-primary via-primary to-accent" />
 
-                                    <div className="grid grid-cols-2 gap-4 mb-6">
-                                        {[
-                                            { label: "Steps", value: "8,432", delay: 1.2 },
-                                            { label: "Calories", value: "420", delay: 1.4 }
-                                        ].map((stat, i) => (
-                                            <motion.div
-                                                key={i}
-                                                initial={{ opacity: 0, scale: 0.8 }}
-                                                animate={{ opacity: 1, scale: 1 }}
-                                                transition={{ delay: stat.delay }}
-                                                className="bg-white/20 backdrop-blur-md rounded-2xl p-4 text-white border border-white/10 shadow-lg"
-                                            >
-                                                <div className="text-xs opacity-80 mb-1 font-medium tracking-wide">{stat.label}</div>
-                                                <div className="text-2xl font-bold">{stat.value}</div>
-                                            </motion.div>
-                                        ))}
-                                    </div>
-
-                                    <motion.div
-                                        initial={{ opacity: 0, y: 50 }}
-                                        animate={{ opacity: 1, y: 0 }}
-                                        transition={{ delay: 1.6 }}
-                                        className="bg-white rounded-3xl p-6 shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)] flex-1 mt-4"
-                                    >
-                                        <div className="flex justify-between items-center mb-4">
-                                            <div className="font-bold text-gray-900">Weekly Goal</div>
-                                            <div className="text-primary text-sm font-bold bg-blue-50 px-2 py-1 rounded-lg">85%</div>
+                                    <div className="relative z-10 p-7 flex-1 flex flex-col">
+                                        {/* Greeting */}
+                                        <div className="text-white mt-10 mb-10">
+                                            <p className="text-sm font-medium opacity-80 mb-1">Good morning</p>
+                                            <h2 className="text-3xl font-extrabold tracking-tight">Alex</h2>
                                         </div>
-                                        <div className="w-full bg-gray-100 rounded-full h-3 mb-6 overflow-hidden">
-                                            <motion.div
-                                                initial={{ width: 0 }}
-                                                animate={{ width: "85%" }}
-                                                transition={{ duration: 1.5, delay: 2 }}
-                                                className="bg-gradient-to-r from-primary to-secondary h-3 rounded-full"
-                                            ></motion.div>
-                                        </div>
-                                        <div className="space-y-4">
-                                            {[1, 2, 3].map(i => (
-                                                <div key={i} className="flex items-center gap-4 group cursor-pointer hover:bg-gray-50 p-2 rounded-xl transition-colors">
-                                                    <div className="w-10 h-10 rounded-full bg-purple-50 flex items-center justify-center text-purple-600 shadow-sm group-hover:bg-purple-100 transition-colors">🏃</div>
-                                                    <div>
-                                                        <div className="font-bold text-sm text-gray-900">Running</div>
-                                                        <div className="text-xs text-gray-500 font-medium">30 mins • 5km</div>
-                                                    </div>
+
+                                        {/* Circular Progress Ring */}
+                                        <div className="flex justify-center mb-8">
+                                            <div className="relative w-[180px] h-[180px]">
+                                                <svg className="w-full h-full -rotate-90" viewBox="0 0 100 100">
+                                                    <circle
+                                                        cx="50"
+                                                        cy="50"
+                                                        r="42"
+                                                        fill="none"
+                                                        stroke="rgba(255,255,255,0.15)"
+                                                        strokeWidth="8"
+                                                    />
+                                                    <circle
+                                                        cx="50"
+                                                        cy="50"
+                                                        r="42"
+                                                        fill="none"
+                                                        stroke="white"
+                                                        strokeWidth="8"
+                                                        strokeLinecap="round"
+                                                        strokeDasharray="263.9"
+                                                        strokeDashoffset="39.6"
+                                                    />
+                                                </svg>
+                                                <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
+                                                    <div className="text-4xl font-extrabold tracking-tight">8,432</div>
+                                                    <div className="text-xs font-medium opacity-80 mt-1 uppercase tracking-wider">Steps</div>
                                                 </div>
-                                            ))}
+                                            </div>
                                         </div>
-                                    </motion.div>
+
+                                        {/* Supporting stats card */}
+                                        <div className="bg-white rounded-2xl p-5 shadow-[0_20px_40px_-15px_rgba(0,0,0,0.12)] mt-auto">
+                                            <div className="grid grid-cols-3 divide-x divide-gray-100">
+                                                <div className="text-center px-2">
+                                                    <div className="text-xl font-extrabold text-gray-900 tracking-tight">420</div>
+                                                    <div className="text-[10px] text-gray-500 uppercase tracking-wider mt-0.5 font-medium">kcal</div>
+                                                </div>
+                                                <div className="text-center px-2">
+                                                    <div className="text-xl font-extrabold text-gray-900 tracking-tight">5.2</div>
+                                                    <div className="text-[10px] text-gray-500 uppercase tracking-wider mt-0.5 font-medium">km</div>
+                                                </div>
+                                                <div className="text-center px-2">
+                                                    <div className="text-xl font-extrabold text-gray-900 tracking-tight">72</div>
+                                                    <div className="text-[10px] text-gray-500 uppercase tracking-wider mt-0.5 font-medium">bpm</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </motion.div>
-
-                        {/* Decorative Elements - Premium Glow */}
-                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-tr from-blue-500/10 to-purple-500/10 rounded-full blur-[80px] -z-10 mix-blend-multiply"></div>
+                        </div>
                     </motion.div>
                 </div>
             </div>
